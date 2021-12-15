@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    // "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    // "module": "commonjs",                                /* Specify what module code is generated. */
+    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */,
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+    "strict": false /* Enable all strict type-checking options. */,
+    "declaration": true, //为每个ts文件生成d.ts文件
+    "lib": ["DOM", "DOM.Iterable", "ES6", "es2016"],
+    // 该declaration选项告诉 tsc 我们是否要.d.ts在编译源代码时创建文件。这并不总是你想要的。如果您只想编译 TypeScript 以便可以运行生成的 JavaScript，则不需要这个。但是由于我们打算发布一个库，.d.ts文件对于帮助为依赖于我们代码的项目提供类型安全很重要
+    "outDir": "./dist",
+    "rootDir": "./",
+    "noImplicitAny": false,
+    "module": "commonjs",
+    "target": "esnext",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    // "paths": {
+    //   "@components/*": ["./src/components/*"]
+    // }
+  },
+  "include": ["src"]
+}

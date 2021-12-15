@@ -1,0 +1,31 @@
+{
+  "name": "llc-calendar",
+  "main": "./dist/calendar.js",
+  "version": "1.1.0",
+  "scripts": {
+    "dev": "webpack",
+    "watch": "webpack --watch",
+    "start": "npm run dev&& webpack serve --open",
+    "ts:init": "tsc --init"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.5",
+    "node-sass": "^7.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.2.5",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.2",
+    "webpack": "^5.65.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.1"
+  }
+}

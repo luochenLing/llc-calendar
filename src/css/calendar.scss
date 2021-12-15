@@ -1,0 +1,129 @@
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.cal {
+  overflow: auto;
+  background: #fff;
+  &-header {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    .bar {
+      display: flex;
+      margin-bottom: 15px;
+      padding-top: 10px;
+      .cancel {
+        flex: 15%;
+        font-size: 13px;
+        color: #23cc77;
+        transform: translateY(7px);
+      }
+      .title {
+        flex: 85%;
+        font-size: 16px;
+        padding-right: 33px;
+      }
+    }
+    .week {
+      display: flex;
+      margin-bottom: 5px;
+      li {
+        flex: 14.98%;
+        font-size: 14px;
+        &:nth-child(1),
+        &:nth-last-child(1) {
+          color: #23cc77;
+        }
+      }
+    }
+  }
+  &-body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    &-month {
+      margin-bottom: 40px;
+      position: sticky;
+      top: 71px;
+      background: #fff;
+    }
+    &-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      li {
+        width: 14%;
+        font-size: 13px;
+        display: inline-block;
+        height: 45px;
+        span {
+          width: 100%;
+          display: block;
+          z-index: -1;
+        }
+      }
+      .range {
+        background-color: #4cd964;
+        color: #fff;
+      }
+      .selected {
+        background-color: rgba(63, 255, 120, 0.1);
+        color: #000;
+      }
+      .disable-day {
+        color: #999;
+      }
+    }
+  }
+}
+// 日历显示动画
+.calendar-slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  animation: slide-in 0.2s forwards;
+  opacity: 1;
+}
+.calendar-slide-out {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  animation: slide-out 0.2s forwards;
+  opacity: 0;
+}
+@keyframes slide-in {
+  0% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 100%);
+  }
+}
