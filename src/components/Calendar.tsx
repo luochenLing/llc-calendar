@@ -367,4 +367,4 @@ function CalendarDom(props: propsTypes) {
 const Calendar = React.forwardRef((props: any, ref: any) => {
   return <CalendarDom {...props} calendarRef={ref}></CalendarDom>;
 });
-export default Calendar;
+export default  React.memo(Calendar);

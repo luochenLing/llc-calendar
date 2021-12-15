@@ -1,7 +1,7 @@
 {
   "name": "llc-calendar",
   "main": "./dist/calendar.js",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "scripts": {
     "dev": "webpack",
     "watch": "webpack --watch",
